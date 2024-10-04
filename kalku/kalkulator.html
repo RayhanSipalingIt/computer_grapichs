@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Modern Kalkulator Algoritma</title>
+    <link rel="stylesheet" href="kalkulator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Modern Calculator</h1>
+        <div class="row">
+            <div class="col">
+                <input type="number" id="x1" placeholder="x1">
+                <input type="number" id="y1" placeholder="y1">
+            </div>
+            <div class="button-container">
+                <button class="btn" onclick="calculateLine('algo')">Algo</button>
+                <button class="btn" onclick="calculateLine('dda')">DDA</button>
+                <button class="btn-clear" onclick="clearResult()">Clear</button>
+            </div>
+            <div class="col">
+                <input type="number" id="x2" placeholder="x2">
+                <input type="number" id="y2" placeholder="y2">
+            </div>
+        </div>
+        <div class="hasil">
+            <div class="kotak" id="result"></div>
+            <div class="kotak2">
+                <canvas id="lineChart"></canvas> <!-- Ini untuk chart -->
+            </div>
+
+        </div>
+    </div>
+    <script src="kalkulator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
