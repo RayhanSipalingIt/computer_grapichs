@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Website Modern Kalkulator Algoritma</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Algorithm Calculator</title>
     <link rel="stylesheet" href="kalkulator.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Modern Calculator</h1>
+        <h1>Modern Algorithm Calculator</h1>
         <div class="row">
             <div class="col">
                 <input type="number" id="x1" placeholder="x1">
                 <input type="number" id="y1" placeholder="y1">
             </div>
             <div class="button-container">
-                <button class="btn" onclick="calculateLine('algo')">Algo</button>
-                <button class="btn" onclick="calculateLine('dda')">DDA</button>
+                <button class="btn" onclick="calculateLine('basic')">Basic Algorithm</button>
+                <button class="btn" onclick="calculateLine('dda')">DDA Algorithm</button>
+                <button class="btn" onclick="drawCircle()">Draw Circle with LINE_FILL</button>
                 <button class="btn-clear" onclick="clearResult()">Clear</button>
             </div>
             <div class="col">
@@ -26,10 +29,17 @@
         <div class="hasil">
             <div class="kotak" id="result"></div>
             <div class="kotak2">
-                <canvas id="lineChart"></canvas> <!-- Ini untuk chart -->
+                <canvas id="lineChart"></canvas>
             </div>
 
         </div>
+        <h1>LINE_FILL Area</h1>
+        <div class="canvas-container">
+            <canvas id="fillCanvas" width="800" height="400"></canvas>
+        </div>
+        <button onclick="drawLineFill()">Draw LINE_FILL</button>
+    </div>
+
     </div>
     <script src="kalkulator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
